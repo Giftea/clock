@@ -1,0 +1,98 @@
+*, *::after,::before{
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+body{
+    background:-webkit-linear-gradient(bottom left,rgb(218, 137, 71),rgb(233, 204, 150),rgb(150, 75, 6));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.clock{
+    width: 300px;
+    height: 300px;
+    background-color: bisque;
+    opacity: .8;
+    border-radius: 50%;
+    border: 2px solid rgb(70, 38, 9);
+    position: relative;
+}
+
+.clock .number {
+   
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size:1.5rem ;
+    text-align: center;
+   
+}
+
+.clock .number.one{ transform: rotate(30deg); }
+
+.clock .number.two{ transform: rotate(60deg); }
+
+.clock .number.three{ transform: rotate(90deg); }
+
+.clock .number.four{ transform: rotate(120deg); }
+
+.clock .number.five{ transform: rotate(150deg); }
+
+.clock .number.six{ transform: rotate(180deg); }
+
+.clock .number.seven{ transform: rotate(210deg); }
+
+.clock .number.eight{ transform: rotate(240deg); }
+
+.clock .number.nine{ transform: rotate(270deg); }
+
+.clock .number.ten{ transform: rotate(300deg); }
+
+.clock .number.eleven{transform: rotate(330deg); }
+
+.clock .hand{
+    --rotation :0;
+    position: absolute;
+    left: 50%;
+    bottom: 50%; 
+    border: 1px solid blanchedalmond;
+    border-top-left-radius : 10px;
+    border-top-right-radius : 10px;
+    z-index: 2;
+    background-color: black;
+    transform: translate(-50%) ;
+    transform-origin: bottom;
+}
+
+.clock .hand.hour-hand{
+    width: 8px;
+    height:35% ;
+}
+
+.clock .hand.minute-hand{
+    width: 7px;
+    height:40% ;
+}
+
+.clock .hand.second-hand{
+    width: 3px;
+    height:45% ;
+    background-color: crimson;
+}
+
+.clock::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 3;
+    border-radius: 50%;
+    background-color: black;
+    transform: translate(-50% ,-50%);
+    width: 15px;
+    height: 15px; 
+}
